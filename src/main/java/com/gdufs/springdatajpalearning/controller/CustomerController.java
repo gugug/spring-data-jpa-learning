@@ -75,4 +75,16 @@ public class CustomerController {
         }
         System.out.println("-------------------------------------------");
     }
+
+    /**
+     * 查询lastName为指定用户昵称
+     */
+    @RequestMapping("/findByLastName")
+    public void findByLastName(){
+        List<Customer> result = customerRepository.findByLastName("Bauer");
+        for (Customer customer:result){
+            System.out.println(customer.toString());
+        }
+        System.out.println("-------------------------------------------");
+    }
 }
