@@ -27,4 +27,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
      * @return
      */
     List<Customer> findByLastName(String lastName);
+
+    Customer findByFirstName(String firstName);
 }
